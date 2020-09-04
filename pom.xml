@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
 
   <name>Simple Web Service</name>
-  <description>Simple web service based on spark (sparkjava.com) and Google Guice for DI and IOC.</description>
+  <description>Simple web service based on spark (sparkjava.com).</description>
 
   <modules>
     <module>simple-ws-webapp</module>
@@ -122,7 +122,17 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
-      
+
+      <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+				</configuration>
+			</plugin>
+
     </plugins>
   </build>
 </project>
