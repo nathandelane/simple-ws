@@ -10,11 +10,6 @@
   <artifactId>simple-ws-service</artifactId>
   
   <dependencies>
-  
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-    </dependency>
     
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>

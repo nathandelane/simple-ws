@@ -5,12 +5,11 @@ import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.threadPool;
 
-import java.util.List;
+import java.util.*;
 
 import com.github.nathandelane.simple.ws.service.config.WebAppConfiguration;
 import com.github.nathandelane.simple.ws.webapp.rest.HelloResource;
 import com.github.nathandelane.simple.ws.webapp.rest.WebResource;
-import com.google.common.collect.Lists;
 
 import spark.Spark;
 
@@ -21,7 +20,7 @@ public class Application {
   private final WebAppConfiguration webAppConfig;
   
   Application() {
-    webResources = Lists.newArrayList();
+    webResources = new ArrayList<>();
     webResources.add(new HelloResource());
     
     webAppConfig = new WebAppConfiguration();

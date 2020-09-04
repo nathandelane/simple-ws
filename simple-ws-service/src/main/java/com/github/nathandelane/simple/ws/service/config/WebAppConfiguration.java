@@ -11,8 +11,6 @@ import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.google.common.base.Strings;
-
 public class WebAppConfiguration {
   
   private static final String WEB_APP_PORT_NUMBER_CONFIG_KEY = "webapp.portNumber";
@@ -60,7 +58,7 @@ public class WebAppConfiguration {
     
     int invVal = minimumRequired;
     
-    if (!Strings.isNullOrEmpty(propertyValue)) {
+    if (!(propertyValue == null || propertyValue.equals(""))) {
       try {
         int propertyValueAsInt = Integer.parseInt(propertyValue);
         
@@ -84,7 +82,7 @@ public class WebAppConfiguration {
     
     int invVal = maximumAllowed;
     
-    if (!Strings.isNullOrEmpty(propertyValue)) {
+    if (!(propertyValue == null || propertyValue.equals(""))) {
       try {
         int propertyValueAsInt = Integer.parseInt(propertyValue);
         
